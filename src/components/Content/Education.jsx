@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -66,9 +67,9 @@ export default function Education() {
                 <div className="border border-border rounded-lg p-5 bg-card hover:border-indigo-200 transition-colors duration-200">
                   <div className="flex items-start justify-between gap-3 mb-1">
                     <h3 className="text-sm font-semibold text-foreground">{role}</h3>
-                    <span className="text-xs font-medium text-indigo-500 bg-indigo-50 px-2 py-0.5 rounded shrink-0">
+                    <Badge variant="secondary" className="text-indigo-500 bg-indigo-50 shrink-0">
                       {tag}
-                    </span>
+                    </Badge>
                   </div>
                   <p className="text-xs font-medium text-muted-foreground mb-2">{org}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
