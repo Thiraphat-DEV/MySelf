@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, Github } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -74,18 +76,21 @@ export default function Contact() {
 
           {/* Right: quick email card */}
           <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible">
-            <div className="p-6 rounded-xl border border-border bg-card">
-              <h3 className="text-sm font-semibold text-foreground mb-1">Send a message</h3>
-              <p className="text-xs text-muted-foreground mb-6">
-                I'll get back to you as soon as possible.
-              </p>
-              <a
-                href="mailto:thiraboaty@gmail.com"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-indigo-500 text-white text-sm font-medium hover:bg-indigo-600 transition-colors"
-              >
-                <Mail size={15} /> Email me
-              </a>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-sm">Send a message</CardTitle>
+                <CardDescription>
+                  I'll get back to you as soon as possible.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild className="w-full bg-indigo-500 hover:bg-indigo-600">
+                  <a href="mailto:thiraboaty@gmail.com">
+                    <Mail size={15} /> Email me
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </div>

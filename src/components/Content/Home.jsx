@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -94,20 +95,20 @@ export default function Home() {
             animate="visible"
             className="flex flex-wrap items-center gap-3"
           >
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-indigo-500 text-white text-sm font-medium hover:bg-indigo-600 transition-colors"
-            >
-              About Me <ArrowRight size={15} />
-            </Link>
-            <a
-              href="https://github.com/Thiraphat-DEV"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border text-sm font-medium text-foreground hover:bg-secondary transition-colors"
-            >
-              <Github size={15} /> GitHub
-            </a>
+            <Button asChild className="bg-indigo-500 hover:bg-indigo-600">
+              <Link to="/about">
+                About Me <ArrowRight size={15} />
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <a
+                href="https://github.com/Thiraphat-DEV"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={15} /> GitHub
+              </a>
+            </Button>
           </motion.div>
         </div>
 
