@@ -24,7 +24,7 @@ const timeline = [
     role: "Data Scientist",
     org: "BOTNOI GROUP",
     desc: "Internship in NLP and image classification using LLMs and JavaScript. Worked on datasets for waste classification and road sign recognition. Bangkok, Thailand.",
-    tag: "Work",
+    tag: "Internship",
   },
   {
     year: "Feb 2022 – Dec 2023",
