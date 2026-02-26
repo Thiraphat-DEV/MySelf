@@ -13,25 +13,32 @@ const fadeUp = {
 
 const timeline = [
   {
-    year: "2020 – Present",
-    role: "Self-taught Developer",
-    org: "Work from Home",
-    desc: "Building web projects independently, continuously learning modern JavaScript ecosystem and frontend frameworks.",
+    year: "Jun 2024 – Present",
+    role: "Back End Developer",
+    org: "Fintechinno Co.,Ltd.",
+    desc: "Fullstack Developer at Fintech. Building scalable backend systems and software solutions. Bangkok City, Thailand.",
     tag: "Work",
   },
   {
-    year: "2021 – 2025",
-    role: "Engineering Studies",
-    org: "BOATY",
-    desc: "Studying engineering fundamentals with a focus on practical problem-solving and computational thinking.",
-    tag: "Education",
+    year: "Dec 2023 – Jan 2024",
+    role: "Data Scientist",
+    org: "BOTNOI GROUP",
+    desc: "Internship in NLP and image classification using LLMs and JavaScript. Worked on datasets for waste classification and road sign recognition. Bangkok, Thailand.",
+    tag: "Work",
   },
   {
-    year: "2022 – 2025",
-    role: "Personal Projects",
-    org: "Self-study",
-    desc: "Dedicating time to mastering React, modern CSS, and open-source contributions to deepen expertise.",
-    tag: "Personal",
+    year: "Feb 2022 – Dec 2023",
+    role: "Web Development Specialist",
+    org: "Freelancer",
+    desc: "WordPress Builder & Design: websites for faculty recruitment and education. Frontend and content management for education sector.",
+    tag: "Work",
+  },
+  {
+    year: "2019 – 2024",
+    role: "Bachelor of Science, Information Technology",
+    org: "Buriram Rajabhat University",
+    desc: "BS in IT, GPA 3.57. Data analysis with Looker, Python, SQL. Certifications from Coursera and freeCodeCamp in web development and Google Data Analytics.",
+    tag: "Education",
   },
 ];
 

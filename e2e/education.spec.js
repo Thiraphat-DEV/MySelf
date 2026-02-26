@@ -13,23 +13,22 @@ test.describe("Education page", () => {
   });
 
   test("should show timeline entries", async ({ page }) => {
-    await expect(page.getByText("2020 – Present")).toBeVisible();
-    await expect(page.getByText("Self-taught Developer")).toBeVisible();
-    await expect(page.getByText("Work from Home")).toBeVisible();
+    await expect(page.getByText("Back End Developer")).toBeVisible();
+    await expect(page.getByText("Fintechinno Co.,Ltd.")).toBeVisible();
 
-    await expect(page.getByText("2021 – 2025")).toBeVisible();
-    await expect(page.getByText("Engineering Studies")).toBeVisible();
-    await expect(page.getByText("BOATY")).toBeVisible();
+    await expect(page.getByText("Data Scientist")).toBeVisible();
+    await expect(page.getByText("BOTNOI GROUP")).toBeVisible();
 
-    await expect(page.getByText("2022 – 2025")).toBeVisible();
-    await expect(page.getByText("Personal Projects")).toBeVisible();
-    await expect(page.getByText("Self-study")).toBeVisible();
+    await expect(page.getByText("Web Development Specialist")).toBeVisible();
+    await expect(page.getByText("Freelancer")).toBeVisible();
+
+    await expect(page.getByText("Bachelor of Science, Information Technology")).toBeVisible();
+    await expect(page.getByText("Buriram Rajabhat University")).toBeVisible();
   });
 
-  test("should show tags Work, Education, Personal", async ({ page }) => {
+  test("should show tags Work and Education", async ({ page }) => {
     await expect(page.getByText("Work", { exact: true }).first()).toBeVisible();
     await expect(page.getByText("Education", { exact: true }).first()).toBeVisible();
-    await expect(page.getByText("Personal", { exact: true }).first()).toBeVisible();
   });
 
   test("should be reachable from home via nav", async ({ page }) => {
