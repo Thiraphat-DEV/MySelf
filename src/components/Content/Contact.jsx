@@ -22,8 +22,8 @@ const contacts = [
   {
     icon: Phone,
     label: "Phone",
-    value: "083-452-7401",
-    href: "tel:0834527401",
+    value: "0645363079",
+    href: "tel:0645363079",
   },
   {
     icon: Github,

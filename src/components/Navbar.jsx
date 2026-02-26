@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Education", to: "/Education" },
-  { label: "Skills", to: "/Skills" },
-  { label: "Contact", to: "/Contact" },
+  { label: "Education", to: "/education" },
+  { label: "Skills", to: "/skills" },
+  { label: "Contact", to: "/contact" },
 ];
 
 function Navbar() {
