@@ -1,0 +1,67 @@
+name: Deploy Pipeline
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    deploy-pipeline:
+        runs-on: ubuntu-latest
+        env:
+            CREATE_DOTENV: ${{ vars.CREATE_DOTENV}}
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+            
+            - name: Setup Repository
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                cache: "npm"
+
+            - name: Install Dependencies
+              run: npm ci
+
+            - name: Deploy to Netlify
+              uses: netlify/actions/cli@master
+              with: 
+                args: deploy --dir=dist --prod --site=${{ secrets.NETLIFY_SITE_ID }}
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
