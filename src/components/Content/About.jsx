@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, Code2 } from "lucide-react";
 
@@ -10,17 +11,19 @@ const fadeUp = {
   }),
 };
 
+const dateToday = new Date();
+const myBirthday = new Date("2002-01-08");
+const myAge = dateToday.getFullYear() - myBirthday.getFullYear();
 const meta = [
-  { icon: Calendar, label: "Age", value: "19" },
+  { icon: Calendar, label: "Age", value: myAge },
   { icon: MapPin, label: "Location", value: "Thailand" },
-  { icon: Code2, label: "Role", value: "Frontend Developer" },
+  { icon: Code2, label: "Role", value: "FullStack Developer" },
 ];
 
-export default function About() {
+function AboutComponent() {
   return (
     <section className="min-h-[calc(100vh-4rem)] py-20">
       <div className="max-w-5xl mx-auto px-6">
-        {/* Section header */}
         <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="mb-14">
           <p className="text-xs font-semibold text-indigo-500 uppercase tracking-widest mb-2">About</p>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">Who I am</h1>
@@ -28,7 +31,6 @@ export default function About() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
-          {/* Photo */}
           <motion.div
             custom={1}
             variants={fadeUp}
@@ -36,7 +38,7 @@ export default function About() {
             animate="visible"
             className="md:col-span-2"
           >
-            <div className="aspect-square w-full max-w-xs rounded-2xl overflow-hidden bg-secondary">
+            <div className="aspect-square w-full max-w-xs rounded-2xl overflow-hidden bg-secondary hover-lift cursor-default">
               <img
                 src="https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixlib=rb-1.2.1&auto=format&fit=crop&w=762&q=80"
                 alt="Thiraphat"
@@ -45,7 +47,6 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Text */}
           <div className="md:col-span-3 flex flex-col gap-5">
             <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible">
               <h2 className="text-xl font-semibold text-foreground mb-3">Thiraphat Chorakhe</h2>
@@ -63,7 +64,6 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* Meta */}
             <motion.div
               custom={4}
               variants={fadeUp}
@@ -86,3 +86,4 @@ export default function About() {
   );
 }
 
+export const About = memo(AboutComponent);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
@@ -34,7 +35,7 @@ const timeline = [
   },
 ];
 
-export default function Education() {
+function EducationComponent() {
   return (
     <section className="min-h-[calc(100vh-4rem)] py-20">
       <div className="max-w-5xl mx-auto px-6">
@@ -47,7 +48,6 @@ export default function Education() {
         </motion.div>
 
         <div className="relative max-w-2xl">
-          {/* Vertical line */}
           <div className="absolute left-2 top-2 bottom-2 w-px bg-border" />
 
           <div className="flex flex-col gap-10 pl-10">
@@ -60,11 +60,10 @@ export default function Education() {
                 animate="visible"
                 className="relative"
               >
-                {/* Timeline dot */}
                 <span className="absolute -left-[2.15rem] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-background" />
 
                 <p className="text-xs text-muted-foreground font-medium mb-2">{year}</p>
-                <div className="border border-border rounded-lg p-5 bg-card hover:border-indigo-200 transition-colors duration-200">
+                <div className="border border-border rounded-lg p-5 bg-card hover:border-indigo-200 transition-colors duration-200 hover-lift">
                   <div className="flex items-start justify-between gap-3 mb-1">
                     <h3 className="text-sm font-semibold text-foreground">{role}</h3>
                     <Badge variant="secondary" className="text-indigo-500 bg-indigo-50 shrink-0">
@@ -83,3 +82,4 @@ export default function Education() {
   );
 }
 
+export const Education = memo(EducationComponent);

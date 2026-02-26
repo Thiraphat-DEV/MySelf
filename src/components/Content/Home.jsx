@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -42,7 +42,7 @@ function TypewriterText({ texts }) {
   );
 }
 
-export default function Home() {
+function HomeComponent() {
   return (
     <section className="min-h-[calc(100vh-4rem)] flex items-center">
       <div className="max-w-5xl mx-auto px-6 py-20 w-full">
@@ -64,7 +64,7 @@ export default function Home() {
             animate="visible"
             className="text-5xl md:text-6xl font-bold text-foreground tracking-tight leading-tight mb-3"
           >
-            Thiraphat C.
+            Thiraphat.C
           </motion.h1>
 
           <motion.div
@@ -74,7 +74,7 @@ export default function Home() {
             animate="visible"
             className="text-xl md:text-2xl text-muted-foreground font-light mb-8 h-8"
           >
-            <TypewriterText texts={["Frontend Developer", "Problem Solver", "Code for Life"]} />
+            <TypewriterText texts={["FullStack Developer", "Problem Solver", "Code is Job"]} />
           </motion.div>
 
           <motion.p
@@ -112,7 +112,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Subtle divider at bottom */}
         <motion.div
           custom={0.8}
           variants={fadeUp}
@@ -131,3 +130,5 @@ export default function Home() {
   );
 }
 
+
+export const Home = memo(HomeComponent);

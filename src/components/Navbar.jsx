@@ -19,12 +19,10 @@ function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-16 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="max-w-5xl mx-auto h-full px-6 flex items-center justify-between">
-        {/* Brand */}
         <Link to="/" className="text-sm font-semibold tracking-tight text-foreground">
           Thiraphat<span className="text-indigo-500">.</span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center">
           {navItems.map(({ label, to }) => {
             const active = location.pathname === to;
@@ -51,7 +49,6 @@ function Navbar() {
           })}
         </nav>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-muted-foreground hover:text-foreground transition-colors p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -61,7 +58,6 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
